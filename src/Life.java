@@ -13,14 +13,6 @@ public class Life {
 	 *   be initialized as alive
 	 */
 	public void initializeGrid(int rows, int cols, double percent) {
-		// TODO Auto-generated method stub	
-		  this.grid = new Cell[rows][cols];
-		  for (Cell[] cellRow: grid) {
-			  for (Cell c : cellRow) {
-				  c = new Cell();
-				  if (Math.random()<percent) c.setLiving(true);
-			  }
-		  }
 	}
 
 	/** Displays the contents of the grid to the standard output.
@@ -39,8 +31,8 @@ public class Life {
 	 * the rules of life: 
 	 * If the cell is currently living --
 	 *   if fewer than two neighboring cells are alive, die (loneliness)
-	 *   if three or four neighboring cells are alive, live
-	 *   if five or more neighboring cells are alive, die (overcrowding)
+	 *   if two or three neighboring cells are alive, live
+	 *   if four or more neighboring cells are alive, die (overcrowding)
 	 * If the cell is currently dead -- 
 	 *   if precisely three neighboring cells are alive, become alive
 	 */
